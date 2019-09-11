@@ -77,8 +77,8 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = ffoxcmd } },
-	{ MODKEY,	                XK_w,      spawn,          {.v = wfcmd } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = ffoxcmd } },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = wfcmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = rangercmd } },
 	{ MODKEY|ShiftMask,             XK_g,      spawn,          {.v = gimpcmd } },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = vimcmd } },
