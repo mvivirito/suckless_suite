@@ -68,6 +68,7 @@ static const char *musiccmd[] = { "st" ,"-e", "cmus", NULL };
 static const char *xlcmd[] = { "st" ,"-e", "xlock", NULL };
 static const char *wfcmd[] = { "st" ,"-e", "wifimgr", NULL };
 static const char *htopcmd[] = { "st" ,"-e", "htop", NULL };
+static const char *matcmd[] = { "st" ,"-e", "cmatrix", NULL };
 static const char *gimpcmd[] = {"gimp", NULL };
 
 
@@ -85,6 +86,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_i,      spawn,          {.v = htopcmd } },
 	{ MODKEY,	                XK_x,      spawn,          {.v = xlcmd } },
 	{ MODKEY,		        XK_c,      spawn,          {.v = wccmd } },
+	{ MODKEY,		        XK_m,      spawn,          {.v = matcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -98,7 +100,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,	                XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_p,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY|ShiftMask,             XK_c,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
