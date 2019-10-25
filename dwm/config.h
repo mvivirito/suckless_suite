@@ -29,7 +29,8 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       0,       0,           -1 },
+ 	{ "Firefox",  NULL,       NULL,       0,       0,           -1 },
+	{ "Xcalc",  NULL,       NULL,       0,       1,           -1 },
 };
 
 /* layout(s) */
@@ -66,9 +67,10 @@ static const char *vimcmd[] = { "st" ,"-e", "vim", NULL };
 static const char *wccmd[] = { "st" ,"-e", "weechat", NULL };
 static const char *musiccmd[] = { "st" ,"-e", "cmus", NULL };
 static const char *xlcmd[] = { "st" ,"-e", "xlock", NULL };
-static const char *wfcmd[] = { "st" ,"-e", "wifimgr", NULL };
+static const char *wfcmd[] = { "wifimgr", NULL };
 static const char *htopcmd[] = { "st" ,"-e", "htop", NULL };
 static const char *matcmd[] = { "st" ,"-e", "cmatrix", NULL };
+static const char *calccmd[] = { "xcalc" , NULL };
 static const char *gimpcmd[] = {"gimp", NULL };
 
 
@@ -87,6 +89,7 @@ static Key keys[] = {
 	{ MODKEY,	                XK_x,      spawn,          {.v = xlcmd } },
 	{ MODKEY,		        XK_c,      spawn,          {.v = wccmd } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = matcmd } },
+	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = calccmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
